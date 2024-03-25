@@ -5,6 +5,7 @@ const dotenv = require("dotenv");
 const mongoose = require("mongoose");
 
 const app = express();
+app.use("/uploads", express.static("uploads"));
 dotenv.config({ path: "./config.env" });
 app.use(cors());
 
